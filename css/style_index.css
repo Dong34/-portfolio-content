@@ -1,0 +1,28 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+	background-color: #ddd;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+    display:inline;
+    padding-right:20px;
+
+}
+
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+
