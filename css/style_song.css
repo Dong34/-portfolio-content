@@ -5,7 +5,7 @@ html{
 body {
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
-    grid-template-rows: 300px 50px 1300px 200px;
+    grid-template-rows: 300px 50px 800px 200px;
     row-gap: 10px;  
     font-family: "Ubuntu", "Courier New", monospace; 
 }
@@ -40,7 +40,6 @@ nav{
 }
 
 
-
 nav li{
     display:inline;
     padding-right:45px;
@@ -57,51 +56,35 @@ nav a:hover{
     text-decoration: underline;
 }
 
-
-
 main{
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
+
+.small-title{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
 
 footer{
     grid-column: 2 / 3;
     grid-row: 4 / 5;
 }
 
-.flex-container {
-	display: flex;
-	flex-wrap: wrap;
+
+
+.in-text-image {
+    text-align: center;
+    margin: 50px;
 }
 
-ul {
-	list-style: none;
+.in-text-image img{
+    height:400px;
+    border-radius: 5px;
 }
 
-.image-gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 10px;
-	height: 100px;
-}
-
-.image-gallery > li {
-	width: 350px; 
-	position: relative;
-}
-
-.image-gallery li img {
-	object-fit: cover;
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
-	border-radius: 5px;
-	height: 200px;
-	width: 300px;
-}
-
-.image-gallery li img:hover {
+.in-text-image img:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
 }
-
