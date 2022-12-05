@@ -60,8 +60,28 @@
 				</p>
 			</div>
 		</div>
+		<!-- modify this form HTML and place wherever you want your form -->
+		<button id="show-form">Hide Contact Form</button>
+		<div id="form">
+			<form
+			action="https://formspree.io/f/mknednyg"
+			method="POST"
+			>
+			<label>
+				Your email:
+				<input type="email" name="email">
+			</label>
+			<label>
+				Your message:
+				<textarea name="message"></textarea>
+			</label>
+			<!-- your other form fields go here -->
+			<button type="submit">Send</button>
+			</form>
+		</div>
+		
 	</main>
-
+	<script src="js/form.js"></script>
 	<footer>
 		<p>University of Michigan, School of Information <br/>
 			&copy; Yier Dong, 2022</p>

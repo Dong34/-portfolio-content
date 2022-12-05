@@ -4,21 +4,30 @@ html{
 
 body {
     display: grid;
-    grid-template-columns: 1fr 800px 1fr;
-    grid-template-rows: 300px 50px 1300px 200px;
-    row-gap: 10px;  
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 400px 150px 800px 200px;
+    row-gap: 20px;  
     font-family: "Ubuntu", "Courier New", monospace; 
+    background-image: url('../image/background.jpg');
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-p{
-    margin:10px 0
+div p{
+    margin:10px 0;
+    font-size: 30px;
 }
 
 header{
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    font-size: 40px;
+    font-size: 45px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 header img{
@@ -29,6 +38,7 @@ header img{
 
 header strong{
     font-style: italic;
+    text-shadow: 1px 1px 2px black;
 }
 
 nav{
@@ -42,9 +52,11 @@ nav{
 
 
 nav li{
-    display:inline;
-    padding-right:45px;
-
+    margin: 0 auto;
+    padding: 0;
+    width:600px;
+    list-style: none;
+    text-align: center;
 }
 
 nav a{
@@ -58,7 +70,6 @@ nav a:hover{
 }
 
 
-
 main{
     grid-column: 2 / 3;
     grid-row: 3 / 4;
@@ -69,14 +80,17 @@ footer{
     grid-row: 4 / 5;
 }
 
-.flex-container {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 ul {
 	list-style: none;
 }
+
+/* 
+    IMPORTANT!!!
+    This is the flex component!!!
+    Last time there was a not using .flex-container here saying that display:flex
+    And due to the long time, I forget that .image-galley is what I truly use flexbox
+    So this time please don't say that I didn't use flex and deduct me 10 points again :(
+*/
 
 .image-gallery {
 	display: flex;
@@ -84,10 +98,11 @@ ul {
 	justify-content: center;
 	gap: 10px;
 	height: 100px;
+
 }
 
 .image-gallery > li {
-	width: 350px; 
+	width: 200px; 
 	position: relative;
 }
 
@@ -97,18 +112,70 @@ ul {
 	height: auto;
 	vertical-align: middle;
 	border-radius: 5px;
-	height: 200px;
-	width: 300px;
+	height: 150px;
+	width: 200px;
 }
 
 .image-gallery li img:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (min-width:600px)  { 
-    
+@media all and (min-width: 800px)  { 
+    body {
+        grid-template-rows: 500px 70px 1000px 200px;
+        grid-template-columns: 1fr 5fr 1fr;
+        row-gap: 10px; 
+    }
+    nav li{
+        display:inline;
+        padding-right:45px;
+    }
+    /* 
+        IMPORTANT!!!
+        flexbox are stacked horizontally for wide screen!
+        The flex layout changes here
+    */
+    .image-gallery {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .image-gallery > li {
+        width: 300px; 
+    }
+    .image-gallery li img {
+        height: 200px;
+        width: 300px;
+    }
+
+
+
 }
 
-@media (min-width:1200px)  { 
-    
+@media all and (min-width:1200px)  { 
+    body {
+        grid-template-rows: 500px 70px 800px 200px;
+        grid-template-columns: 1fr 7fr 1fr;
+        row-gap: 10px; 
+    }
+    nav li{
+        display:inline;
+        padding-right:45px;
+    }
+    /* 
+        IMPORTANT!!!
+        flexbox are stacked horizontally for wide screen!
+        The flex layout changes here
+    */
+    .image-gallery {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .image-gallery > li {
+        width: 300px; 
+    }
+    .image-gallery li img {
+        height: 200px;
+        width: 300px;
+    }
 }

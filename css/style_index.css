@@ -4,21 +4,30 @@ html{
 
 body {
     display: grid;
-    grid-template-columns: 1fr 800px 1fr;
-    grid-template-rows: 300px 50px 800px 200px;
-    row-gap: 10px;  
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 400px 150px auto 200px;
+    row-gap: 20px;  
     font-family: "Ubuntu", "Courier New", monospace; 
+    background-image: url('../image/background.jpg');
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-p{
-    margin:10px 0
+div p{
+    margin:10px 0;
+    font-size: 30px;
 }
 
 header{
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    font-size: 40px;
+    grid-row: 1 / span 1;
+    font-size: 45px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 header img{
@@ -30,14 +39,16 @@ header img{
 
 header strong{
     font-style: italic;
+    text-shadow: 1px 1px 2px black;
 }
 
 nav{
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 2 / span 1;
     font-size: 25px;
     border: 5px solid black;
+    
 }
 
 @keyframes fadeIn {
@@ -53,9 +64,11 @@ nav{
 }
 
 nav li{
-    display:inline;
-    padding-right:45px;
-
+    margin: 0 auto;
+    padding: 0;
+    width:600px;
+    list-style: none;
+    text-align: center;
 }
 
 nav a{
@@ -70,11 +83,24 @@ nav a:hover{
 
 main{
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 3 / span 1;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#intro{
+    grid-row: 1 / span 1;
+}
+
+#member{
+    grid-row: 2 / span 1;
 }
 
 .small-title{
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
@@ -85,13 +111,11 @@ main{
 
 aside {
     width: 30%;
-    height: 30%;
-    padding-left: .5rem;
-    margin-left: .5rem;
+    height: 40%;
+    padding-left: 15px;
+    margin-left: 15px;
     float: right;
-
     font-style: italic;
-
 }
 
 aside img{
@@ -102,13 +126,56 @@ aside img{
 
 footer{
     grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    grid-row: 4 / span 1;
 }
 
-@media (min-width:600px)  { 
-    
+
+@media all and (min-width: 700px)  { 
+    body {
+        grid-template-rows: 500px 70px auto 200px;
+        grid-template-columns: 1fr 5fr 1fr;
+        row-gap: 10px; 
+    }
+    nav li{
+        display:inline;
+        padding-right:45px;
+    }
+
+
+
 }
 
-@media (min-width:1200px)  { 
+@media all and (min-width:1200px)  { 
+    body {
+        grid-template-rows: 500px 70px auto 200px;
+        grid-template-columns: 1fr 7fr 1fr;
+        row-gap: 10px; 
+    }
+    nav li{
+        display:inline;
+        padding-right:45px;
+
+    }
+
+    /* 
+        IMPORTANT!!!
+        Two paragraphs are stacked horizontally for wide screen!
+        The grid layout changes here
+    */
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
     
+    #intro{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    #member{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
 }
