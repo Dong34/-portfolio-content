@@ -17,7 +17,26 @@ body {
     background-size: cover;
 }
 
+.skip-main{
+	position: absolute;
+	left: -99999px;
+	top: 30px;
+}
 
+.skip-main:focus, .skip-main:active{
+	position: relative;
+	left: 0;
+	z-index:9999;
+	width: 75%;
+	height: auto;
+	margin: 0 auto;
+    color: white;
+	text-align: center;
+	text-decoration: none;
+
+	/* color information, edit this to suit the colors of your layout */
+
+}
 
 div p{
     margin:10px 0;
