@@ -8,7 +8,7 @@ body {
     grid-template-rows: 500px 150px 800px 200px;
     row-gap: 20px;  
     font-family: "Ubuntu", "Courier New", monospace; 
-    background-color: #EAE0D5;
+    background-color: #f3dfc1;
     height: 100%;
 
     /* Center and scale the image nicely */
@@ -39,6 +39,7 @@ header img{
 header strong{
     font-style: italic;
     text-shadow: 1px 1px 2px black;
+    color: #246A73;
 }
 
 header a{
@@ -74,12 +75,11 @@ header a{
 nav{
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 2 / span 1;
     font-size: 25px;
     border: 5px solid black;
+    background-image: url('../image/background.jpg');
 }
-
-
 
 nav li{
     margin: 0 auto;
@@ -87,6 +87,10 @@ nav li{
     width:600px;
     list-style: none;
     text-align: center;
+}
+
+nav li ul{
+    color:#246A73;
 }
 
 nav a{

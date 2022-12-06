@@ -8,7 +8,7 @@ body {
     grid-template-rows: 500px 150px auto 200px;
     row-gap: 10px;  
     font-family: "Ubuntu", "Courier New", monospace; 
-    background-color: #EAE0D5;
+    background-color: #f3dfc1;
     height: 100%;
 
     /* Center and scale the image nicely */
@@ -39,6 +39,7 @@ header img{
 header strong{
     font-style: italic;
     text-shadow: 1px 1px 2px black;
+    color: #246A73;
 }
 
 header a{
@@ -62,23 +63,21 @@ header a{
     color: white;
 	text-align: center;
 	text-decoration: none;
-
-	/* color information, edit this to suit the colors of your layout */
-
 }
 
 .current{
     text-decoration: underline;
+    color: #160F29;
 }
 
 nav{
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 2 / span 1;
     font-size: 25px;
     border: 5px solid black;
+    background-image: url('../image/background.jpg');
 }
-
 
 nav li{
     margin: 0 auto;
@@ -86,6 +85,10 @@ nav li{
     width:600px;
     list-style: none;
     text-align: center;
+}
+
+nav li ul{
+    color:#246A73;
 }
 
 nav a{
@@ -99,11 +102,13 @@ nav a:hover{
 }
 
 main{
+    color: #160F29;
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 3 / span 1;
 }
 
 .small-title{
+    color: #246A73;
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
