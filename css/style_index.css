@@ -36,8 +36,21 @@ body {
 	text-decoration: none;
 }
 
+nav li{
+    margin: 0 auto;
+    padding: 0;
+    width:600px;
+    list-style: none;
+    text-align: center;
+}
+
+nav li ul{
+    color:#246A73;
+}
+
 .current{
     text-decoration: underline;
+    color: #160F29;
 }
 
 div p{
@@ -73,15 +86,15 @@ header a{
 }
 
 nav{
-    color: #160F29;
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / span 1;
     font-size: 25px;
     border: 5px solid black;
-    background-image: url('../image/background.jpg');
-    
+    background-color: #DDBEA8;
 }
+
+
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -95,13 +108,7 @@ nav{
     }
 }
 
-nav li{
-    margin: 0 auto;
-    padding: 0;
-    width:600px;
-    list-style: none;
-    text-align: center;
-}
+
 
 nav a{
     color: black;
