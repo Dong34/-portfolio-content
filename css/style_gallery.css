@@ -8,7 +8,7 @@ body {
     grid-template-rows: 500px 150px 800px 200px;
     row-gap: 20px;  
     font-family: "Ubuntu", "Courier New", monospace; 
-    background-image: url('../image/background.jpg');
+    background-color: #EAE0D5;
     height: 100%;
 
     /* Center and scale the image nicely */
@@ -65,6 +65,10 @@ header a{
 
 	/* color information, edit this to suit the colors of your layout */
 
+}
+
+.current{
+    text-decoration: underline;
 }
 
 nav{
